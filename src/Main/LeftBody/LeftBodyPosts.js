@@ -5,7 +5,7 @@ export default function Posts(){
       <div class="posts">
         {AllPostsInfos().map(props => 
           <div class="post">
-              <PostHeader user={props.postBy} userPic={props.postByPic}/>
+              <PostHeader user={props.userPost} userPic={props.userPostPic}/>
               <PostContent post={props.postedPic}/>
               <PostFooter user={props.fristLike} userPic={props.fristLikePic} likeNumbers={props.likeNumbers}/>
           </div>
@@ -17,7 +17,7 @@ function AllPostsInfos(){
     const allPosts = []
     const postBy = ["meowed", "barked"]
     const postedPic = ["gato-telefone.svg", "dog.svg"]
-    const fristLike = ["respondeai.svg", "adorable_animals.svg"]
+    const fristLike = ["respondeai", "adorable_animals"]
     const likeNumbers = ["101.523", "99.159"]
     for(let i = 0 ; i < postBy.length; i++){
         allPosts.push({userPost:postBy[i], userPostPic:`${postBy[i]}.svg`, postedPic:postedPic[i], fristLike:fristLike[i], fristLikePic:`${fristLike[i]}.svg`, likeNumbers:likeNumbers[i]})

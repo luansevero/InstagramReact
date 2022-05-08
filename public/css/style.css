@@ -191,6 +191,10 @@ body {
   font-size: 24px;
 }
 
+.post .fundo .acoes .like{
+  color: red;
+}
+
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
 }
@@ -309,6 +313,7 @@ body {
 .logo-mobile, .instagram-mobile {
   display: none !important;
 }
+
 
 @media (max-width: 935px) {
   .sidebar {

@@ -1,5 +1,3 @@
-import Icons from "./Global/Icons.js"
-import Imgs from "./Global/Imgs"
 export default function Navbar(){
     return(
         <div class="navbar">
@@ -17,23 +15,23 @@ export default function Navbar(){
 function Logo(){
     return(
         <div class="logo">
-            <Icons name="logo-instagram" />
+            <ion-icon name="logo-instagram" ></ion-icon>
             <div class="separador"></div>
-            <Imgs src="logo.png" />
+            <img src="assets/img/logo.png" alt="logo" />
         </div>
     )
 }
 function LogoMobile(){
     return(
         <div class="logo-mobile">
-            <Icons name="logo-instagram"/>
+            <ion-icon name="logo-instagram"></ion-icon>
         </div>
     )
 }
 function MobileInstagram(){
     return(
         <div class="instagram-mobile">
-            <Imgs src="logo.png" />
+            <imgs src="assets/img/logo.png" alt="logo" />
         </div>
     )
 }
@@ -47,17 +45,17 @@ function Search(){
 function InteractionIcons(){
     return (
         <div class="icones">
-            <Icons name="paper-plane-outline"/>
-            <Icons name="compass-outline"/>
-            <Icons name="heart-outline"/>
-            <Icons name="person-outline"/>
+            <ion-icon name="paper-plane-outline" ></ion-icon>
+            <ion-icon name="compass-outline" ></ion-icon>
+            <ion-icon name="heart-outline" ></ion-icon>
+            <ion-icon name="person-outline" ></ion-icon>
         </div>
     )
 }
 function MobileInteractionIcons(){
     return (
         <div class="icones-mobile">
-            <Icons name="paper-plane-outline"/>
+            <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
     )
 }

@@ -1,12 +1,11 @@
-import Icons from "./Global/Icons";
 export default function MobileFooter(){
     return(
         <div class="fundo-mobile">
-            <Icons name="home" />
-            <Icons name="search-outline" />
-            <Icons name="add-circle-outline" />
-            <Icons name="heart-outline" />
-            <Icons name="person-outline" />
+            <ion-icon name="home" ></ion-icon>
+            <ion-icon name="search-outline" ></ion-icon>
+            <ion-icon name="add-circle-outline" ></ion-icon>
+            <ion-icon name="heart-outline" ></ion-icon>
+            <ion-icon name="person-outline" ></ion-icon>
         </div>
     )
 }

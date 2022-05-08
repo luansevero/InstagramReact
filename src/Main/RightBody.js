@@ -1,8 +1,7 @@
-import Imgs from "../Global/Imgs"
 export default function RightBody(){
   return (
     <div class="sidebar">
-        <LoogedUser user="catanacomics" username="Catana" src="catanacomics.svg"/>
+        <LoogedUser user="catanacomics" username="Catana" src="assets/img/catanacomics.svg"/>
         <div class="sugestoes">
             <SugestionsHeader />
             {AllSugestions().map(props =>
@@ -17,7 +16,7 @@ export default function RightBody(){
 function LoogedUser(props){
   return (
     <div class="usuario">
-      <Imgs src={props.src} />
+      <img src={props.src} alt ={props.src}/>
       <div class="texto">
         <strong>{props.user}</strong>
         {props.username}
@@ -38,7 +37,7 @@ function AllSugestions(){
     const users = ["bad.vibes.memes", "chibirdart", "razoesparaacreditar", "adorable_animals", "smallcutecats"]
     const reasons = ["Segue você", "Segue você", "Novo no Instagram", "Segue você", "Segue você"]
     for(let i = 0; i < users.length; i++){
-        profileDetails.push({user:users[i], userPic:`${users[i]}.svg`, reason:reasons[i]})
+        profileDetails.push({user:users[i], userPic:`/assets/img/${users[i]}.svg`, reason:reasons[i]})
     }
     return profileDetails
 }
@@ -46,13 +45,13 @@ function Sugestions(props){
   return(
     <div class="sugestao">
         <div class="usuario">
-            <Imgs src={props.userPic} />
-        <div class="texto">
-          <div class="nome">{props.user}</div>
-          <div class="razao">{props.reason}</div>
+            <img src={props.userPic} alt={props.userPic}/>
+            <div class="texto">
+                <div class="nome">{props.user}</div>
+                <div class="razao">{props.reason}</div>
+            </div>
         </div>
-            <div class="seguir">Seguir</div>
-        </div>
+        <div class="seguir">Seguir</div>
     </div>
   )
 }

@@ -1,28 +1,35 @@
 import Icons from "../../Global/Icons"
 import Imgs from "../../Global/Imgs"
 export default function Posts(){
-    const allPosts = [
-        {postBy: "meowed", postByPic:"meowed.svg", postedPic:"gato-telefone.svg", fristLike:"respondeai", fristLikePic:"respondeai.svg", likeNumbers: "101.523"},
-        {postBy: "barked", postByPic:"barked.svg", postedPic:"dog.svg", fristLike: "adorable_animals", fristLikePic:"adorable_animals.svg", likeNumbers: "99.159"}
-    ]
     return(
       <div class="posts">
-        {allPosts.map(props => 
+        {AllPostsInfos().map(props => 
           <div class="post">
-              <PostHeader />
-              <PostContent />
-              <PostHeader />
+              <PostHeader user={props.postBy} userPic={props.postByPic}/>
+              <PostContent post={props.postedPic}/>
+              <PostFooter user={props.fristLike} userPic={props.fristLikePic} likeNumbers={props.likeNumbers}/>
           </div>
         )}
       </div>
     )
 }
+function AllPostsInfos(){
+    const allPosts = []
+    const postBy = ["meowed", "barked"]
+    const postedPic = ["gato-telefone.svg", "dog.svg"]
+    const fristLike = ["respondeai.svg", "adorable_animals.svg"]
+    const likeNumbers = ["101.523", "99.159"]
+    for(let i = 0 ; i < postBy.length; i++){
+        allPosts.push({userPost:postBy[i], userPostPic:`${postBy[i]}.svg`, postedPic:postedPic[i], fristLike:fristLike[i], fristLikePic:`${fristLike[i]}.svg`, likeNumbers:likeNumbers[i]})
+    }
+    return allPosts
+}
 function PostHeader(props){
     return(
         <div class="topo">
             <div class="usuario">
-                <Imgs src={props.postByPic} />
-                {props.postBy}
+                <Imgs src={props.userPic} />
+                {props.user}
             </div>
             <div class="acoes">
                 <Icons name="ellipsis-horizontal" />
@@ -33,7 +40,7 @@ function PostHeader(props){
 function PostContent(props){
     return(
         <div class="conteudo">
-            <Imgs src={props.postedPic} />
+            <Imgs src={props.post} />
         </div>
     )
 }
@@ -51,9 +58,9 @@ function PostFooter(props){
                 </div>
             </div>
             <div class="curtidas">
-                <Imgs src={props.fristLikePic} />
+                <Imgs src={props.userPic} />
                 <div class="texto">
-                    Curtido por <strong>{props.fristLike}</strong> e <strong>outras {props.likeNumbers} pessoas</strong>
+                    Curtido por <strong>{props.user}</strong> e <strong>outras {props.likeNumbers} pessoas</strong>
                 </div>
             </div>
         </div>

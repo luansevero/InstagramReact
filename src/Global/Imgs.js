@@ -1,7 +1,4 @@
 export default function Imgs(props){
-    let source = "public/assets/img/" + props.src
-    console.log(source)
-    return(
-        <img src={source} />
-    )
+    let source = `/assets/img/${props.src}`
+    return <img src={source} alt={props.src}/>
 }

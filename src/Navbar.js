@@ -20,7 +20,6 @@ function Logo(){
             <Icons name="logo-instagram" />
             <div class="separador"></div>
             <Imgs src="logo.png" />
-            <img src="/public/assets/img/9gag.svg" alt=""></img>
         </div>
     )
 }

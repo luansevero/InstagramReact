@@ -18,7 +18,13 @@ function AllPostsInfos(){
     const fristLike = ["respondeai", "adorable_animals"]
     const likeNumbers = ["101.523", "99.159"]
     for(let i = 0 ; i < postBy.length; i++){
-        allPosts.push({userPost:postBy[i], userPostPic:`assets/img/${postBy[i]}.svg`, postedPic:`assets/img/${postedPic[i]}`, fristLike:fristLike[i], fristLikePic:`assets/img/${fristLike[i]}.svg`, likeNumbers:likeNumbers[i]})
+        allPosts.push({userPost:postBy[i],
+            userPostPic:`assets/img/${postBy[i]}.svg`,
+            postedPic:`assets/img/${postedPic[i]}`,
+            fristLike:fristLike[i],
+            fristLikePic:`assets/img/${fristLike[i]}.svg`,
+            likeNumbers:likeNumbers[i]
+        })
     }
     return allPosts
 }
